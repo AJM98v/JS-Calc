@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script type="text/javascript">
+        function InterNum(e){
+          var num = e.innerText
+           document.getElementById('text').innerText += num
+
+
+
+
+        }
+        function Reset(){
+
+            document.getElementById('text').firstChild.remove()
+
+
+
+        }
+
+        function Del(){
+          var n = document.getElementById('text').innerText;
+          var c = n.length;
+          document.getElementById('text').innerText = n.substr(0,c-1)
+
+
+
+        }
+        function Result(){
+            var n = eval(document.getElementById('text').innerText)
+            document.getElementById('text').firstChild.remove()
+            document.getElementById('text').innerText =n
+        }
+
+
+    </script>
+</head>
+<body>
+    <section id="body">
+        <div id="title">Calc</div>
+        <div id="text">
+
+
+        </div>
+        <div id="but">
+            <button onclick="InterNum(this)">7</button>
+            <button onclick="InterNum(this)">8</button>
+            <button onclick="InterNum(this)">9</button>
+            <button onclick="Del()" >DEL</button>
+            <button onclick="InterNum(this)">4</button>
+            <button onclick="InterNum(this)">5</button>
+            <button onclick="InterNum(this)">6</button>
+            <button onclick="InterNum(this)">+</button>
+            <button onclick="InterNum(this)">1</button>
+            <button onclick="InterNum(this)">2</button>
+            <button onclick="InterNum(this)">3</button>
+            <button onclick="InterNum(this)">-</button>
+            <button onclick="InterNum(this)">.</button>
+            <button onclick="InterNum(this)">0</button>
+            <button onclick="InterNum(this)">/</button>
+            <button onclick="InterNum(this)">*</button>
+            <button onclick="Reset()">Reset</button>
+            <button onclick="Result()">=</button>
+        </div>
+
+    </section>
+
+</body>
+</html>
